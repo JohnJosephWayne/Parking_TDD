@@ -19,12 +19,12 @@ public class Place {
 
     public void setFullPlace(Car car) {
         this.car = car;
-        this.occupied = true; // Marque la place comme occupée
+        this.occupied = true;
     }
 
     public void setEmptyPlace() {
         this.car = null;
-        this.occupied = false; // Libère la place
+        this.occupied = false;
     }
 
     public int getNumero() {

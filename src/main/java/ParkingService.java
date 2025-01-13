@@ -44,6 +44,6 @@ public class ParkingService {
 
         Car car = place.getCar();
         place.setEmptyPlace();
-        return minute * price; // Renvoie le calcul correct si toutes les conditions sont satisfaites
+        return minute * price;
     }
 }
