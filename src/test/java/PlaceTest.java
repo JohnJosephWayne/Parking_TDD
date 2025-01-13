@@ -13,25 +13,24 @@ public class PlaceTest {
     @Test
     public void createPlace_returnNumero(){
         Place place = new Place(1);
-        int result = place.setNumero(1);
+        int result = place.getNumero();
 
         Assertions.assertEquals(1, result);
     }
 
     @Test
-    public void createPlace_returnState(){
+    public void createPlaceEmpty_returnState(){
         Place place = new Place(1);
-        boolean result = place.setState(true);
+        boolean result = place.isOccupied();
 
         Assertions.assertTrue(true);
     }
 
     @Test
-    public void createPlace_returnNumeroAndState(){
+    public void createPlaceEmpty_returnNumeroAndState(){
         Place place = new Place(1);
-        int result1 = place.setNumero(1);
-        boolean result2 = place.setState(true);
-
+        int result1 = place.getNumero();
+        boolean result = place.isOccupied();
 
         Assertions.assertEquals(1, result1);
         Assertions.assertTrue(true);

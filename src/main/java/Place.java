@@ -1,42 +1,33 @@
 public class Place {
+    private int numero;
+    private boolean occupied;
+    private Car car;
 
-    int numero;
-    boolean state;
-
-    public Place(int i) {
+    public Place(int numero) {
+        this.numero = numero;
+        this.occupied = false;
+        this.car = null;
     }
 
-    public boolean isState() {
-        return state;
+    public boolean isOccupied() {
+        return occupied;
     }
 
-    public boolean setState(boolean state) {
-        return this.state = state;
+    public Car getCar() {
+        return car;
+    }
+
+    public void setFullPlace(Car car) {
+        this.car = car;
+        this.occupied = true; // Marque la place comme occupée
+    }
+
+    public void setEmptyPlace() {
+        this.car = null;
+        this.occupied = false; // Libère la place
     }
 
     public int getNumero() {
         return numero;
     }
-
-    public int setNumero(int numero) {
-        return this.numero = numero;
-    }
-
-    public int createPlaceWithNumero(){
-        setNumero(1);
-        return numero;
-    }
-    public boolean createPlaceWithState(){
-        setState(true);
-        return state;
-    }
-
-    public void createPlaceWithStateAndNumero(){
-        setNumero(1);
-        setState(true);
-
-    }
-
-
-    
 }
